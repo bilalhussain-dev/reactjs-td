@@ -35,7 +35,6 @@ function App() {
 
   // Delete Item
   const deleteItems = id => {
-
     setTasks((tasks) => {
      return tasks.filter((task, index) => {
         return index !== id;
@@ -66,10 +65,11 @@ function App() {
               <ul>
                   {tasks.map((task, index) => {
                     return <Task 
-                            task={task} 
-                            key={index}
-                            id={index}
-                            deleteItem={deleteItems}></Task>
+                                task={task} 
+                                key={index}
+                                id={index}
+                                deleteItem={deleteItems}>
+                            </Task>
                   })}
               </ul>
           </div>
